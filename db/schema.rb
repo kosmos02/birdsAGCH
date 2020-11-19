@@ -23,11 +23,8 @@ ActiveRecord::Schema.define(version: 2020_11_19_204548) do
 
   create_table "trees", force: :cascade do |t|
     t.string "name"
-    t.integer "birds_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["birds_id"], name: "index_trees_on_birds_id"
   end
 
-  add_foreign_key "trees", "birds", column: "birds_id"
 end

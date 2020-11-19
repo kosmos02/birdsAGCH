@@ -21,7 +21,7 @@ class TreesController < ApplicationController
     def update
         @tree = Tree.find(params[:id])
 
-        @tree.update(name: params[:name] species: params[:species])
+        @tree.update(name: params[:name], species: params[:species])
 
         render json: {message: "Updated #{@tree.id}"}
     end
@@ -33,5 +33,4 @@ class TreesController < ApplicationController
 
         render json: {message: "destroyed #{@tree.id}"}
     end
-end
 end
