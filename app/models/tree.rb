@@ -1,3 +1,3 @@
 class Tree < ApplicationRecord
-  belongs_to :birds
+  has_many :birds
 end

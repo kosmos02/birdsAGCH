@@ -4,6 +4,8 @@ class CreateBirds < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :species
 
+      t.references :tree
+
       t.timestamps
     end
   end
